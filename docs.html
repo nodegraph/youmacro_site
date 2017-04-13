@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>YouMacro</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+        window.onload = function () {
+            var username = "support";
+            var hostname = "youmacro.com";
+            var link_text = username + "@" + hostname ;
+
+            // Inject support address.
+            var anchor = document.createElement('a');
+            var anchor_text = document.createTextNode(link_text);
+            anchor.appendChild(anchor_text)
+            anchor.href = "mail" + "to:" + username + "@" + hostname
+            document.getElementById('youmacro_contact').appendChild(anchor);
+        }
+
+        function show_hide_docs()
+        {
+            var div = document.getElementById("docs_container");
+            if (div.style.display !== "none") {
+                div.style.display = "none";
+            } else {
+                div.style.display = "block";
+            }
+        }
+
+
+    </script>
+</head> 
+
+<body data-spy="scroll">
+    
+    <!---//Facebook button code-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <!-- ******HEADER****** --> 
+    <header id="header" class="header">  
+        <div class="container">            
+            <h1 class="logo pull-left">
+                <a class="scrollto" href="./index.html" onclick="window.location.href='./index.html'">
+                    <span class="logo-title">YouMacro</span>
+                </a>
+            </h1><!--//logo-->              
+            <nav id="main-nav" class="main-nav navbar-right" role="navigation">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button><!--//nav-toggle-->
+                </div><!--//navbar-header-->            
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#nodes">Nodes</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#links">Links</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#clean">Clean</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#edit">Edit</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#view">View</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#groups">Groups</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#custom_nodes">Custom Nodes</a></li>                        
+                        <li class="nav-item last"><a class="scrollto" href="#tips">Tips</a></li>
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </nav><!--//main-nav-->
+        </div>
+    </header><!--//header-->
+    
+
+    <!-- popup to show images -->
+    <div class="popup" attributes="#">
+    </div>
+
+    <!-- ******DOCS****** --> 
+    <section id="docs" class="docs section">
+        <div id="docs_container" class="container">
+            <div class="docs-inner">
+
+            <section id="nodes">
+            <h2 class="title text-center">Nodes</h2>            
+            <br/>
+            <div class="block">
+                <h3 class="sub-title text-center">Nodes Perform Tasks</h3>
+                <img src="assets/gimp/node.png" alt="" width="25%" align="left" hspace="20" style = "border:10px solid #17baef;" />
+                <!-- <img src="assets/gimp/node.png" alt="" width="25%" style="display:block; margin-left: auto; margin-right: auto; border:3px solid #000099;" /> -->
+                <p>A node is represented visually by a rectangular shape with input and output shapes attached to it. A node shows its inputs as boxes and its outputs as upside down triangles. </p>
+                When a node is executed it will look at the inputs on the node, perform some type of operation on them, and then place the results into its outputs. For example, there could be a node which adds two numbers together. In this case, the inputs would be the two numbers and the output would be the sum. (1+1=2) </p>
+                <p>The name of the node appears directly on the node and is user configurable. In this case, we see that the name is "data".</p>
+                <p>The data types that flow into an input or flow out of an output are modeled after javascript data types. The complete set of data types are numbers, strings, booleans, objects, and arrays.</p>
+            </div><!--//block-->
+            </section>
+
+            </div><!--//docs-inner-->         
+        </div><!--//container-->
+    </section><!--//features-->
+
+    <section id="docs" class="docs section">
+        <div id="docs_container" class="container">
+            <div class="docs-inner">
+
+            <section id="links">
+            <h2 class="title text-center">Links</h2>            
+            <div class="block">
+                <h3 class="sub-title text-center">Links Direct Data Flow</h3>
+                <img src="assets/gimp/link.png" alt="" width="25%" align="left" hspace="20" style = "border:10px solid #17baef;" />
+                <p>A link is visually represented by an arrow where the base starts at an output of a node and the head ends at the input of another node.</p>
+                <p>A link directs data from the output one node to an input of another node. Each input expects a certain type of data. When the data types do not match, the upstream data is automatically converted to match. Then the upstream data is automatically merged into the expected input data type.</p>
+                <p>The merging process examines the internal properties of the data. Matching property names will get their value overridden with the upstream value. Non-matching property names will get their values injected into the input value.</p>
+            </div><!--//block-->
+            </section>
+
+            </div><!--//docs-inner-->         
+        </div><!--//container-->
+    </section><!--//features-->
+
+    <section id="docs" class="docs section">
+        <div id="docs_container" class="container">
+            <div class="docs-inner">
+
+            <section id="clean">
+            <h2 class="title text-center">Clean</h2>            
+
+            <div class="block">
+                <h3 class="sub-title text-center">Clean A Node To Run It</h3>
+                <img src="assets/gimp/clean_node.png" alt="" width="25%" align="left" hspace="20" style = "border:10px solid #17baef;" />
+                <p>A node is said to be clean when all of its inputs and output values are up to date.</p>
+                <p>Cleaning a node causes the app to start performing work in order to make the node clean.</p>
+                <p>In order to compute an up to date output value, the node's inputs must be clean as well. Hence this is a recursive process which cleans all of the linked upstream nodes as well.</p>
+                <p>A clean node will be marked on the right with the letter "C". A dirty node will simply be missing the letter "C". </p>
+            </div><!--//block-->
+            <br/>
+            </section>
+
+            </div><!--//docs-inner-->         
+        </div><!--//container-->
+    </section><!--//features-->
+
+
+    <section id="docs" class="docs section">
+        <div id="docs_container" class="container">
+            <div class="docs-inner">
+
+            <section id="edit">
+            <h2 class="title text-center">Edit</h2>            
+            <br/>
+            <div class="block">
+                <h3 class="sub-title text-center">Edit A Node To Change Its Behavior</h3>
+                <img src="assets/gimp/edit_inputs.png" alt="" width="25%" align="left" hspace="20" style = "border:10px solid #17baef;" />
+                <p>Editing a node involves changing the inputs to the node. This can be performed by rewiring the inputs to the node or editing the input value directly.</p>
+                <p>When an input is connected it cannot be edited directly as it's set to use the value from upstream.</p>
+                <p>However, when the input is not connected, it can be edited directly in the GUI through the data editor.</p>
+                <p>The current node being edited will be marked on the right with the letter "E". 
+                <p>An input is not always exposed with a box shape on the node. It can be explicitly hidden or exposed through the GUI. When an input is hidden it cannot be linked, but it can still be edited directly. </p> 
+
+            </div><!--//block-->
+            <br/>
+            </section>
+
+            </div><!--//docs-inner-->         
+        </div><!--//container-->
+    </section><!--//features-->
+
+
+
+    <section id="docs" class="docs section">
+        <div id="docs_container" class="container">
+            <div class="docs-inner">
+
+            <section id="view">
+            <h2 class="title text-center">View</h2>            
+
+
+            <div class="block">
+                <h3 class="sub-title text-center">View A Node To Examine Its Outputs</h3>
+                <img src="assets/gimp/view_outputs.png" alt="" width="25%" align="left" hspace="20" style = "border:10px solid #17baef;" />
+                <p>Viewing a node, allows you to inspect the output values produced by the nodes in the data viewer. </p>
+                <p>Outputs of nodes can have one of these following data types: numbers, strings, boolean, objects, and arrays. The data viewer allows you to dive into objects and arrays by double clicking on them.</p>
+                <p>You can the outputs of both a dirty node and a clean node. The dirty node will show its current dirty values, while a clean node will show its current up to date values. </p>
+                <p>The current node being viewed will be marked on the right with the letter "V".</p>
+            </div><!--//block-->
+            <br/>
+            </section>
+
+            </div><!--//docs-inner-->         
+        </div><!--//container-->
+    </section><!--//features-->
+
+
+    <section id="docs" class="docs section">
+        <div id="docs_container" class="container">
+            <div class="docs-inner">
+
+            <section id="groups">
+            <h2 class="title text-center">Groups</h2>  
+            <div class="block">
+                <h3 class="sub-title text-center">Groups Hide Complexity</h3>
+                <img src="assets/gimp/group_node.png" alt="" width="25%" align="left" hspace="20" style = "border:10px solid #17baef;" />
+                <p>A group node is a node which contains another node graph inside itself. When you dive into a group node, you will see the contents of the group node. When you surface from a group you will see the node graph in which the group node exists.</p>
+                <p>Group nodes allow us to treat a complex node graphs as one node. It also allows us to define a strict interface to the logic contained within. The interface is represented by the inputs and outputs on the group node.</p>
+                <p>In order to create inputs or outputs on a group node, you will first need to dive into the group. Then create <b>Input Nodes</b> or <b>Output Nodes</b> respectively. Each Input Node or Output Node inside the group will appear as inputs or outputs respectively on the group node under the same names. </p>
+                <p>There are a few different types of group nodes. Each provides a specialized context for their nodes to operate in.</p>
+            </div><!--//block-->
+            <br/>
+            <div class="block">
+                <h3 class="sub-title text-center">Browser Groups Manage The Browser</h3>
+                <img src="assets/gimp/web_group.png" alt="" width="25%" align="left" hspace="20" style = "border:10px solid #17baef;" />
+                <p>The Browser Group Node automatically manages browser. Nodes which uses the browser must be created inside a Browser Group.</p>
+                <p>When diving into a Browser Group Node, a browser window will automatically open up. When surfacing from inside a Browser Group Node, the browser window will automatically get destroyed. </p>
+                <p>To create nodes which manipulate the browser you will first need to right-click inside the browser. This will bring up a menu containing possible nodes to create. The position of the right-click in the browser will be used to automatically set a number of input values on the nodes it creates (such as the type of the element or the text value of the element).</p>
+            </div><!--//block-->
+            </section>
+
+            </div><!--//docs-inner-->         
+        </div><!--//container-->
+    </section><!--//features-->
+
+
+    <section id="docs" class="docs section">
+        <div id="docs_container" class="container">
+            <div class="docs-inner">
+
+
+            <section id="custom_nodes">
+            <h2 class="title text-center">Custom Nodes</h2>  
+            <div class="block">
+                <h3 class="sub-title text-center">Create Custom Nodes With Javascript</h3>
+                <p>Javascript is the language used to specify the script for our script nodes. Script nodes are very powerful, allowing users to essentially create brand new node types.</p>
+                <p>A script node only contains one input and one output. They are accessible in the scripting environment as "input" and as "output".</p>
+                <p>In the following example, the output's value property is being set to the sum of the input's x and y properties.</p>
+                <div class="code-block">
+                    <pre><code class="language-javascript">
+        output.value = input.x + input.y;
+                    </code></pre>
+                </div><!--//code-block-->
+                </br>
+                <h3 class="sub-title text-center">Script Nodes Inside While Loops</h3>
+                <p>When the script node is placed inside a While node or another looping node, the script will often need to share state between iterations. The scripting environment provides a context object which will hold any properties between iterations. In the following example, the script node counts how many times it loops and sets it as the output's value property. </p>
+                <div class="code-block">
+                    <pre><code class="language-javascript">
+        if (context.count == undefined) {
+            context.count = 1
+        } else {
+            context.count += 1
+        }
+        output.value = context.count
+                    </code></pre>
+                </div><!--//code-block-->
+
+            </div><!--//block-->   
+            <br/>
+            </section>
+
+            </div><!--//docs-inner-->         
+        </div><!--//container-->
+    </section><!--//features-->
+
+
+    <section id="docs" class="docs section">
+        <div id="docs_container" class="container">
+            <div class="docs-inner">
+
+            <section id="tips">
+            <h2 class="title text-center">Tips</h2>  
+            <div class="block">
+                <h3 class="sub-title text-center">Creating Browser Nodes</h3>
+                <p>The following is the easiest way to create browser nodes. Watching some of the video demos will likely make things clearer.</p>
+                <ul>
+                    <li><p>First, create a Browser Group Node. Then dive into it.</p></li>
+                    <li><p>Once you dive in, you'll see a browser window open up automatically. Wait while it loads the first web page.</p></li>
+                    <li><p>Now right-click in the browser. A menu of possible browser nodes to create should open up in the app. Note that other nodes are usually created by right-clicking in the node graph instead.</p></li>
+                    <li><p>The position of the right-click is significant as it allows the robot to automatically determine and set the input values on the nodes that it creates for you. This makes the creation of nodes much quicker. Otherwise, you'd need to manually edit each node to set appropriate values for the behavior you want, by yourself. Things like the element's text value, type or position are determined automatically.</p></li>
+                    <li><p>Note that newly created nodes will automatically be connected to the last selected node. This reduces the amount of time you'll spend linking up nodes. So make sure you select the node you want to link to before creating a node.</p></li>
+
+                </ul>
+                </br>
+                <h3 class="sub-title text-center">Performing Actions on Elements</h3>
+                <p>There are 3 basic steps to performing actions in the browser. </p>
+                <ul>
+                            <li><b>First</b>, create a "Get All Elements" node, or identify an upstream node which outputs an array of web page elements. This array can contain just one element or it can contain many elements. An element for the robot is either an image, a piece of text, an input field, or a select dropdown. Note that you can visualize the elements at any time by feeding it into a Highlight Elements node.</p></li>
+                            <li><b>Second</b>, you'll likely want to filter down this array of elements to just the ones that you're actually interested in. To do this, link the previous node to any of the nodes which perform filtering operations on the array of elements. Isolate, prune, sort, join and remove are some common terms used in the names of these nodes.</p></li>
+                            <li><b>Third</b>, you need to perform an action on the elements you've filtered down. To do this, link the previous node to one of the action nodes, like Mouse Action. The MouseAction node will click the first element in the array of elements. Other nodes like the download videos node will download all the input elements.</p></li>
+                </ul>
+                    <p>By following the above tips, you will soon be creating powerful and time-saving macros.</p>
+
+            </div><!--//block--> 
+            </section>
+            </div><!--//docs-inner-->         
+        </div><!--//container-->
+    </section><!--//features-->
+
+
+      
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="container text-center">
+            <medium class="copyright">YouMacro can automate it.  <i class="fa fa-thumbs-up"></i></small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+     
+    <!-- Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>   
+    <script type="text/javascript" src="assets/plugins/jquery.easing.1.3.js"></script>   
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/js/main.js"></script>       
+</body>
+</html> 
+

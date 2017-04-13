@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>YouMacro</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+        window.onload = function () {
+            var username = "support";
+            var hostname = "youmacro.com";
+            var link_text = username + "@" + hostname ;
+
+            // Inject support address.
+            var anchor = document.createElement('a');
+            var anchor_text = document.createTextNode(link_text);
+            anchor.appendChild(anchor_text)
+            anchor.href = "mail" + "to:" + username + "@" + hostname
+            document.getElementById('youmacro_contact').appendChild(anchor);
+        }
+
+        function show_hide_docs()
+        {
+            var div = document.getElementById("docs_container");
+            if (div.style.display !== "none") {
+                div.style.display = "none";
+            } else {
+                div.style.display = "block";
+            }
+        }
+
+
+    </script>
+</head> 
+
+<body data-spy="scroll">
+    
+    <!---//Facebook button code-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <!-- ******HEADER****** --> 
+    <header id="header" class="header">  
+        <div class="container">            
+            <h1 class="logo pull-left">
+                <a class="scrollto" href="#promo">
+                    <span class="logo-title">YouMacro</span>
+                </a>
+            </h1><!--//logo-->              
+            <nav id="main-nav" class="main-nav navbar-right" role="navigation">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button><!--//nav-toggle-->
+                </div><!--//navbar-header-->            
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#about">About</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#features">Features</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#download">Download</a></li>                        
+                        <li class="nav-item"><a class="" href="./docs.html">Node Graph</a></li>
+                        <li class="nav-item last"><a class="scrollto" href="#contact">Contact</a></li>
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </nav><!--//main-nav-->
+        </div>
+    </header><!--//header-->
+    
+    <!-- ******PROMO****** -->
+    <section id="promo" class="promo section offset-header">
+        <div class="container text-center image-center">
+             
+            <img src="assets/images/logo_150x150.png" alt="" />
+            <p>  </p>
+            <h2 class="title">YouMacro</h2>
+            <section id="videos">
+
+            <p class="intro">
+                    </br>
+                    Drag and drop video links from web pages.</br></br>
+                    Double click a macro to download many videos at once.</br></br>
+                    Create your own custom macros to automate smart devices or perform other online tasks.</br></br>
+                        <center>
+                        <p>
+                            <a class="btn btn-cta-primary" href="#download">100% free download</a>  
+                        </p>
+                        </center>
+            </p>
+
+            <p class="intro">
+                    </br></br><b style="color: #074f66">Drag and Drop Demo</b></br>
+            </p>
+
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/Y9lLSNOf3sU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+            <p class="intro">
+                    </br>
+                    <b style="color: #074f66">Double Click Demo</b></br>
+            </p>
+
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/_u5AnYShWC8?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            
+            <p class="intro">
+                    </br>
+                    <b style="color: #074f66">Custom Macro Demo</b></br>
+            </p>
+
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/jQK533nctjA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+            <!--
+            <div class="btns">
+                <a class="btn btn-cta-primary" href="https://youtu.be/tLFRWLXY0cA" target="_blank">Drag and Drop Demo</a>
+                <a class="btn btn-cta-primary" href="https://youtu.be/oiiqV3duZcQ" target="_blank">Automation Demo</a>
+            </div>
+            -->
+            <ul class="meta list-inline">
+                <!-- <a class="btn btn-cta-secondary" href="https://youtu.be/tLFRWLXY0cA" target="_blank">Drag and Drop Demo</a>-->
+                <!-- <a class="btn btn-cta-secondary" href="https://youtu.be/10LOugEb9es" target="_blank">App Macros Demo</a>-->
+                <!-- <a class="btn btn-cta-secondary" href="https://youtu.be/ANYvyEwltMY" target="_blank">User Macros Demo</a>-->
+                <!-- <li><a href="http://www.google.com" target="_blank">Getting News Posts</a></li> -->
+                <!-- <li><a href="http://www.google.com" target="_blank">Browsing Videos</a></li> -->
+                <!-- <li><a href="http://www.google.com" target="_blank">Checking Prices</a></li> -->
+            </ul><!--//meta-->
+            </section>
+        </div><!--//container-->
+        <div class="social-media">
+            <div class="social-media-inner container text-center">
+                <div class="container text-center">
+                <medium class="copyright">YouMacro can automate it.  <i class="fa fa-thumbs-up"></i> </medium>
+                </footer>
+            </div>
+        </div>
+    </section><!--//promo-->
+    
+    <!-- ******ABOUT****** --> 
+    <section id="about" class="about section">
+        <div class="container">
+<h2 class="title text-center">What can YouMacro do?</h2>
+            <p class="intro ">YouMacro uses macros to automate online tasks. <br/><br/>
+            Dragging and dropping video links triggers our video download macro. It automatically figures out the settings to download the best quality video or vlog.<br/><br/>
+            Double-clicking on a macro makes it run. YouMacro comes with a number of pre-made macros. For example, there are macros to download the latest videos by YouTube vloggers and Vimeo creators.<br/><br/>
+            You can also create your own macros to perform custom logic and execute actions online. Check your social media accounts and bank account balances. Turn on your smart lights and appliances under various conditions. You can even perform simple scraping of text, images, and videos from web pages.
+            </p>
+
+            <h2 class="title text-center">How are custom macros made?</h2>
+            <p class="intro ">
+            Macros are created through a visual interface called a node graph. You simply add nodes and link them together. The links indicate the direction of data flow from one node to another. Each node operates on the data flowing into it through the links. For example, the "Download Videos" node will download all the video elements flowing into it.
+            <br/><br/> The node graph framework allows us to capture more of the semantic meaning and intent behind each action we want to perform in the browser. We can identify elements based solely on their semantic meaning, such as its text content, and its relation to nearby elements on the web page. There are a number of nodes which can constrain the elements by proximity and distance. Because of this, we can build fairly robust macros which work even when the web page changes its underlying implementation (such as an element's XPath, CSS, or ID).
+            </p>
+            <div class="row">
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-file-video-o"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Drag and Drop Videos</h3>
+                        <p>Just drag and drop video links onto the app. This triggers the video download macro which downloads the highest quality video and audio.</p>
+                    </div><!--//content-->
+                </div><!--//item-->
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-cogs"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Double-Click a Macro</h3>
+                        <p>Simply double-click a macro in order to execute it. Then watch as it opens the browser and performs actions autonomously.</p>
+                    </div><!--//content-->
+                </div><!--//item-->
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-share-alt"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Share your Macros</h3>
+                        <p>Have you created a macro that you want to share with the world? Well, now you can. YouMacro supports importing and exporting of macros.</p>
+                    </div><!--//content-->
+                </div><!--//item-->           
+                <div class="clearfix visible-md"></div>    
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-file-video-o"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Parallel Video Downloads</h3>
+                        <p>The sites which host videos may limit the rate at which videos download. However, or macro is able to download many videos in parallel.</p>
+                    </div><!--//content-->
+                </div><!--//item-->                
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-cogs"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Create Custom Macros</h3>
+                        <p>Custom macros are created through a visual interface made of nodes and links. For example, the video download node will download all videos flowing into it.</p>
+                    </div><!--//content-->
+                </div><!--//item-->
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-user-secret"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Encryption</h3>
+                        <p>All application data is encrypted and stored locally on your machine.<br/>Encryption: XSalsa20 stream cipher<br/>Authentication: Poly1305 MAC</p>
+                    </div><!--//content-->
+                </div><!--//item-->               
+            </div><!--//row-->            
+        </div><!--//container-->
+    </section><!--//about-->
+
+
+
+    
+    <!-- ******FEATURES****** --> 
+    <section id="features" class="features section">
+        <div class="container text-center">
+            <h2 class="title">Features</h2>
+            <ul class="feature-list list-unstyled">
+                <li><i class="fa fa-check"></i> drag and drop to download videos</li>
+                <li><i class="fa fa-check"></i> parallel video downloads</li>
+                <li><i class="fa fa-check"></i> double click to execute macros</li>
+                <li><i class="fa fa-check"></i> create custom macros using a visual node graph</li>
+                <li><i class="fa fa-check"></i> all app data is encrypted</li>
+            </ul>
+        </div><!--//container-->
+    </section><!--//features-->
+
+    <!-- popup to show images -->
+    <div class="popup" attributes="#">
+    </div>
+    
+    <!-- ******Download****** --> 
+    <section id="download" class="license section">
+        <div class="container">
+            <div class="license-inner">
+            <h2 class="title text-center">Download</h2>
+                <div class="info">
+                    <p> </p>
+                </div><!--//info-->
+                <div class="cta-container">
+                    <div class="speech-bubble">                    
+                        <p><strong>YouMacro installs in a matter of minutes.</strong>
+                            <ul>
+                                <li>100% free</li>
+                                <li>no ads</li>
+                                <li>never expires</li> 
+                            </ul>
+                        </p>
+                        <p class="intro">
+                        <p>
+                        <strong>Support operating systems are:</strong>
+                            <ul>
+                                <li>Windows 64 bit</li>
+                                <li>Mac 64 bit</li>
+                            </ul>
+                        </p>
+                        <p>
+                        </p>
+                        </p>
+
+                        </div><!--//speech-bubble-->
+
+                        <center>
+                            <button onclick="window.location.href='https://firebasestorage.googleapis.com/v0/b/youmacro.appspot.com/o/windows%2Fyoumacro_1.15.3.1.exe?alt=media&token=46b8ad97-3f04-4a8b-92d6-d18b6dd5e442'">windows_1.15.3.1</button>
+                            </br>
+                            <button onclick="window.location.href='https://firebasestorage.googleapis.com/v0/b/youmacro.appspot.com/o/windows%2Fyoumacro_1.15.3.0.exe?alt=media&token=55388b94-de2f-413d-9203-44716c5e8769'">windows_1.15.3.0</button>
+                            </br>
+                            <button onclick="window.location.href='https://firebasestorage.googleapis.com/v0/b/youmacro.appspot.com/o/windows%2Fyoumacro_1.15.2.0.exe?alt=media&token=ed792be0-6fb0-4c5c-af3c-1969633be97a'">windows_1.15.2.0</button>
+                            </br>
+                            <button onclick="window.location.href='https://firebasestorage.googleapis.com/v0/b/youmacro.appspot.com/o/windows%2Fyoumacro_1.15.1.0.exe?alt=media&token=0ac1672a-1db4-44df-99e3-6f3204fb137a'">windows_1.15.1.0</button>
+                            </br></br>
+                            <button onclick="window.location.href='https://firebasestorage.googleapis.com/v0/b/youmacro.appspot.com/o/macos%2Fyoumacro_1.15.3.1.dmg?alt=media&token=136e0d57-2485-4741-89dd-ca4f3f7c2a74'">mac_1.15.3.1</button>
+                            </br>
+                            <button onclick="window.location.href='https://firebasestorage.googleapis.com/v0/b/youmacro.appspot.com/o/macos%2Fyoumacro_1.15.3.0.dmg?alt=media&token=7e10ce46-607e-4b58-afb7-1d20e71de021'">mac_1.15.3.0</button>
+                            </br>
+                            <button onclick="window.location.href='https://firebasestorage.googleapis.com/v0/b/youmacro.appspot.com/o/macos%2Fyoumacro_1.15.2.0.dmg?alt=media&token=37a2c41d-e6c9-4cea-a249-7fffe705def5'">mac_1.15.2.0</button>
+                            </br>
+                            <button onclick="window.location.href='https://firebasestorage.googleapis.com/v0/b/youmacro.appspot.com/o/macos%2Fyoumacro_1.15.1.0.dmg?alt=media&token=4b764707-564b-4627-9dba-010f7128918a'">mac_1.15.1.0</button>
+                        </center>
+                        </br>
+
+                    <div class="text-center">
+                        <!-- <p><a class="btn btn-cta-primary" href="./windows/youmacro.exe">LITE - windows 64bit</a></p> -->
+                        <!-- <p><a class="btn btn-cta-primary" href="./macos/youmacro.dmg">LITE - mac 64bit</a></p> -->
+                        <!-- <p><a class="btn btn-cta-primary" href="https://gum.co/DGtZ" target="_blank">PRO - windows 64bit</a></p> -->
+                        <!-- <p><a class="btn btn-cta-primary" href="https://gum.co/CYYwB" target="_blank">PRO - mac 64bit</a></p> -->
+                        <!-- <p><strong><a href="https://gum.co/QbCCX/lite" target="_blank">LITE</a> </strong> </p> -->
+                        <!-- <p><strong><a href="https://gum.co/tgctL" target="_blank">PRO</a> </strong> </p> -->
+                    </div><!--//btn-container-->
+                </div><!--//cta-container-->
+            </div><!--//license-inner-->
+        </div><!--//container-->
+    </section><!--//how-->
+    
+    <!-- ******CONTACT****** --> 
+    <section id="contact" class="contact section has-pattern">
+        <div class="container">
+            <div class="contact-inner">
+                <h2 class="title  text-center">Contact</h2>
+                <!-- <p class="intro  text-center">Please do not hesitate to contact us. </p> -->
+                <div class="author-message">                      
+                    <div class="profile">
+                        <img class="img-responsive" src="assets/images/logo_150x150.png" alt="" />
+                    </div><!--//profile-->
+                    <div class="speech-bubble">
+                        <h3 class="sub-title">Found a bug? Want to request a new pre-made macro?</h3>
+                        <p id=youmacro_contact>Contact us directly via email:  </p> 
+
+                        <div class="source">
+                            <br/>
+                            <span class="name">YouMacro</a></span>
+                            <br/>
+                            <span class="title">Los Angeles, California</span>
+                        </div><!--//source-->
+
+                    </div><!--//speech-bubble-->     
+
+                </div><!--//author-message-->
+                <div class="clearfix"></div>
+                <div class="info text-center">
+                </div><!--//info-->
+            </div><!--//contact-inner-->
+        </div><!--//container-->
+    </section><!--//contact-->  
+      
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="container text-center">
+            <medium class="copyright">YouMacro can automate it.  <i class="fa fa-thumbs-up"></i></small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+     
+    <!-- Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>   
+    <script type="text/javascript" src="assets/plugins/jquery.easing.1.3.js"></script>   
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/js/main.js"></script>       
+</body>
+</html> 
+
